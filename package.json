@@ -4,10 +4,11 @@
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc",
 		"format": "oxfmt --write .",
 		"lint:fix": "oxlint --fix",
-		"start": "wrangler dev",
+		"start": "node dist/index.js",
 		"cf-typegen": "wrangler types",
 		"type-check": "tsc --noEmit"
 	},
